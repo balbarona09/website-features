@@ -1,0 +1,40 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.container {
+	width: 75%;
+	margin: 40px auto;
+}
+.accordion {
+	border: none;
+	outline: none;
+	background-color: hsl(0, 0%, 95%);
+	width: 100%;
+	text-align: left;
+	padding: 20px;
+	cursor: pointer;
+	font-size: 20px;
+	transition: .4s;
+}
+.accordion:hover, .active {
+	background-color: hsl(0, 0%, 85%);
+}
+.accordion:after {
+	content: "+";
+	float: right;
+	font-weight: 700;
+}
+.active:after {
+	content: "\2212";
+}
+.panel {
+	padding: 0 20px;
+	line-height: 2em;
+	letter-spacing: .02em;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-out;
+}
